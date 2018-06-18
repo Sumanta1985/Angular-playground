@@ -1,0 +1,51 @@
+<!-- <input 
+  type=text
+  class="form-control"
+  (input)='onUpdateServer($event)'/>
+<br/> -->
+<input 
+  type=text
+  class="form-control"
+  [(ngModel)]='servername'/>
+<br/>
+<input
+  type=text
+  class ="form-control"
+  [(ngModel)]='username' (input)="onInputUser($event)"/>
+<br/>
+<p>{{username}}</p>
+<br/>
+<!-- <button class="btn btn-primary" [disabled]="!allowclick" -->
+<!-- <button 
+  class="btn btn-primary" 
+  [disabled]="username === ''"
+  (click)="onClickreset()">Reset user</button> 
+<br/>
+<br/>
+<button 
+  class="btn btn-primary" 
+  [disabled]="!allowNewServer" 
+  (click)='onClickServer()'>Add server</button>
+<br/>
+<br/> -->
+<button 
+  class='btn btn-primary' 
+  (click)='onClickDisplay()'>Display details</button>
+ <p *ngIf="showpara">secret password = tuna</p>
+<!-- <p [innerText]="allowNewServer"></p>
+<p innerText={{allowNewServer}}></p>
+<!-- <p >{{servername}}</p> -->
+<!-- <p>Server created!Name is {{servername}}</p>
+<p>{{serverStatus}}</p> -->
+<!-- <app-server *ngFor="let></app-server> -->
+<!-- <ol>
+  <li *ngFor="let buttonClick of buttonClicks" 
+  [ngStyle]="{backgroundColor:checkForFive()}" 
+  [ngClass]="{'white-text':buttonClick>=5}" >{{buttonClick}}</li>
+</ol> -->
+<div 
+  *ngFor="let buttonClick of buttonClicks" 
+  [ngStyle]="{backgroundColor:checkForFive()}" 
+  [ngClass]="{'white-text':buttonClick >= 5}" 
+>{{buttonClick}}</div>
+
